@@ -20,12 +20,12 @@ public final class JassRound {
 
         this.teamCount = teamCount;
         this.scores = new int[teamCount];
-        this.melds = new ArrayList<>();
+        this.melds = new ArrayList<>(teamCount);
         this.meldScores = new int[teamCount];
 
         for (int i = 0; i < teamCount; ++i) {
             scores[i] = 0;
-            melds.set(i, new ArrayList<JassMeld>());
+            melds.add(new ArrayList<JassMeld>());
             meldScores[i] = 0;
         }
     }

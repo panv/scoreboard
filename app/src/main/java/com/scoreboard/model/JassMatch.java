@@ -21,7 +21,7 @@ public final class JassMatch {
         }
 
         this.teamCount = teamCount;
-        this.rounds = new ArrayList<>();
+        this.rounds = new ArrayList<>(teamCount);
         this.rounds.add(new JassRound(teamCount));
         this.totalScores = new int[teamCount];
         this.pointsGoal = new int[teamCount];
