@@ -1,0 +1,17 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="jass_scoreboard_team_layout_width">100dp</dimen>
+    <dimen name="jass_score_display_margin">20dp</dimen>
+    <dimen name="spinner_meld_padding">10dp</dimen>
+    <dimen name="table_score_history_min_dimensions">300dp</dimen>
+    <dimen name="table_score_history_title_margin">5dp</dimen>
+    <dimen name="score_picker_margin">10dp</dimen>
+
+    <dimen name="jass_score_text_size">40sp</dimen>
+    <dimen name="spinner_meld_text_size">20sp</dimen>
+    <dimen name="score_picker_title_text_size">18sp</dimen>
+    <dimen name="score_picker_score_text_size">30sp</dimen>
+</resources>
