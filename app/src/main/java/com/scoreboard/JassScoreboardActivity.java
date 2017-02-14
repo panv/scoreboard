@@ -229,15 +229,12 @@ public class JassScoreboardActivity extends AppCompatActivity implements OnClick
                         computeScores(points * scoreMultiplier, scoreMultiplier);
                         break;
                     case COMMON_GOAL:
-                        match.updatePointsGoal(points);
                         updatePointsGoal(points);
                         break;
                     case FIRST_TEAM_GOAL:
-                        match.updatePointsGoal(0, points);
                         updateSplitGoal(0, points);
                         break;
                     case SECOND_TEAM_GOAL:
-                        match.updatePointsGoal(1, points);
                         updateSplitGoal(1, points);
                         break;
                 }
@@ -313,12 +310,14 @@ public class JassScoreboardActivity extends AppCompatActivity implements OnClick
     }
 
     private void updateSplitGoal(int index, int newGoal) {
+        match.updatePointsGoal(index, newGoal);
         int goalIndex = index == 0 ? R.id.team_goal_1 : R.id.team_goal_2;
         TextView goal = (TextView) findViewById(goalIndex);
         goal.setText(String.format(java.util.Locale.getDefault(), "%d", newGoal));
     }
 
     private void updatePointsGoal(int pointsGoal) {
+        match.updatePointsGoal(pointsGoal);
         TextView goal = (TextView) findViewById(R.id.scoreboard_common_points_goal);
         String goalText = String.format(getString(R.string.jass_common_points_goal),
                 "<b>" + pointsGoal + "</b>");
