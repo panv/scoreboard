@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/score_picker_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/score_picker_margin"
+        android:layout_marginTop="@dimen/score_picker_margin"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/score_picker_title_text_size"/>
+
+    <TextView
+        android:id="@+id/score_picker_score_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/score_picker_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/score_picker_margin"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/score_picker_score_text_size"/>
+
+    <GridLayout
+        android:id="@+id/numpad_grid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/score_picker_score_display"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:columnCount="3"
+        android:rowCount="4">
+
+        <Button
+            android:id="@+id/numpad_1"
+            android:background="@android:color/transparent"
+            android:text="@string/numpad_text_1"/>
+
+        <Button
+            android:id="@+id/numpad_2"
+            android:background="@android:color/transparent"
+            android:text="@string/numpad_text_2"/>
+
+        <Button
+            android:id="@+id/numpad_3"
+            android:background="@android:color/transparent"
+            android:text="@string/numpad_text_3"/>
+
+        <Button
+            android:id="@+id/numpad_4"
+            android:background="@android:color/transparent"
+            android:text="@string/numpad_text_4"/>
+
+        <Button
+            android:id="@+id/numpad_5"
+            android:background="@android:color/transparent"
+            android:text="@string/numpad_text_5"/>
+
+        <Button
+            android:id="@+id/numpad_6"
+            android:background="@android:color/transparent"
+            android:text="@string/numpad_text_6"/>
+
+        <Button
+            android:id="@+id/numpad_7"
+            android:background="@android:color/transparent"
+            android:text="@string/numpad_text_7"/>
+
+        <Button
+            android:id="@+id/numpad_8"
+            android:background="@android:color/transparent"
+            android:text="@string/numpad_text_8"/>
+
+        <Button
+            android:id="@+id/numpad_9"
+            android:background="@android:color/transparent"
+            android:text="@string/numpad_text_9"/>
+
+        <LinearLayout
+            android:id="@+id/score_picker_checkbox_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+
+            <CheckBox
+                android:id="@+id/numpad_double_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="@string/numpad_text_double_score"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/numpad_0"
+            android:background="@android:color/transparent"
+            android:text="@string/numpad_text_0"/>
+
+        <ImageButton
+            android:id="@+id/numpad_correct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/icon_description_score_picker_cancel"
+            android:src="@drawable/ic_keyboard_backspace_black"/>
+
+    </GridLayout>
+
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/numpad_grid"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/score_picker_cancel"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="@string/dialog_cancel"/>
+
+        <Button
+            android:id="@+id/score_picker_match"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="@string/dialog_match"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/score_picker_confirm"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="@string/dialog_ok"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
