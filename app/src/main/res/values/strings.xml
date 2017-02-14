@@ -1,3 +1,41 @@
 <resources>
     <string name="app_name">Scoreboard</string>
+
+    <string name="jass_scoreboard_team_name_1">Team 1</string>
+    <string name="jass_scoreboard_team_name_2">Team 2</string>
+    <string name="jass_default_score">-</string>
+    <string name="jass_common_points_goal">Playing to %s points</string>
+    <string name="jass_score_picker_prompt">Enter your score for this round</string>
+    <string name="jass_goal_picker_prompt">Enter the new score goal</string>
+
+    <string name="score_history_round">Round</string>
+    <string name="score_history_points">Points</string>
+    <string name="score_history_melds">Melds</string>
+
+    <string name="numpad_text_0">0</string>
+    <string name="numpad_text_1">1</string>
+    <string name="numpad_text_2">2</string>
+    <string name="numpad_text_3">3</string>
+    <string name="numpad_text_4">4</string>
+    <string name="numpad_text_5">5</string>
+    <string name="numpad_text_6">6</string>
+    <string name="numpad_text_7">7</string>
+    <string name="numpad_text_8">8</string>
+    <string name="numpad_text_9">9</string>
+    <string name="numpad_text_double_score">x2</string>
+
+    <string name="icon_description_meld_spinner">Opens the meld selection menu</string>
+    <string name="icon_description_score_update">Opens the score update menu</string>
+    <string name="icon_description_score_cancel">Cancels the last score update</string>
+    <string name="icon_description_split_goal">Enable different goals for both teams</string>
+    <string name="icon_description_score_picker_cancel">Cancels the last number input</string>
+
+    <string name="toast_cannot_cancel">There is nothing to cancel</string>
+    <string name="toast_invalid_score">Invalid score: the max number of points in a round is %d</string>
+
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="dialog_match">Match!</string>
+    <string name="dialog_leave">Leave</string>
+    <string name="dialog_game_end">%s won the match. Congratulations!</string>
 </resources>
