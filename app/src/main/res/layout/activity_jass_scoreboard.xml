@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_jass_scoreboard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.scoreboard.JassScoreboardActivity">
+
+    <RelativeLayout
+        android:id="@+id/scoreboard_top_row"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/scoreboard_vertical_delimiter">
+
+        <RelativeLayout
+            android:id="@+id/meld_spinner_layout_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/first_team_layout"
+            android:layout_toStartOf="@+id/first_team_layout">
+
+            <ImageButton
+                android:id="@+id/meld_spinner_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@color/colorBackground"
+                android:contentDescription="@string/icon_description_meld_spinner"
+                android:src="@drawable/ic_chat_bubble_outline_black"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/first_team_layout"
+            android:layout_width="@dimen/jass_scoreboard_team_layout_width"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/score_display_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/jass_score_display_margin"
+                android:layout_marginTop="@dimen/jass_score_display_margin"
+                android:text="@string/jass_default_score"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/jass_score_text_size"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/team_goal_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/score_display_1"
+                android:layout_centerHorizontal="true"
+                android:textColor="@android:color/black"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/team_name_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/score_display_1"
+                android:layout_centerHorizontal="true"
+                android:text="@string/jass_scoreboard_team_name_1"
+                android:textColor="@android:color/black"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/score_update_layout_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/first_team_layout"
+            android:layout_toRightOf="@+id/first_team_layout">
+
+            <ImageButton
+                android:id="@+id/score_update_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@color/colorBackground"
+                android:contentDescription="@string/icon_description_score_update"
+                android:src="@drawable/ic_add_black"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/scoreboard_vertical_delimiter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+        <ImageButton
+            android:id="@+id/scoreboard_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/colorBackground"
+            android:contentDescription="@string/icon_description_score_cancel"
+            android:src="@drawable/ic_undo_black"/>
+
+        <TextView
+            android:id="@+id/scoreboard_common_points_goal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/black"/>
+
+        <ImageButton
+            android:id="@+id/scoreboard_split_team_goals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@color/colorBackground"
+            android:contentDescription="@string/icon_description_split_goal"
+            android:src="@drawable/ic_call_split_black"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/scoreboard_bottom_row"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/scoreboard_vertical_delimiter">
+
+        <RelativeLayout
+            android:id="@+id/meld_spinner_layout_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/second_team_layout"
+            android:layout_toStartOf="@+id/second_team_layout">
+
+            <ImageButton
+                android:id="@+id/meld_spinner_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@color/colorBackground"
+                android:contentDescription="@string/icon_description_meld_spinner"
+                android:src="@drawable/ic_chat_bubble_outline_black"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/second_team_layout"
+            android:layout_width="@dimen/jass_scoreboard_team_layout_width"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/score_display_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/jass_score_display_margin"
+                android:layout_marginTop="@dimen/jass_score_display_margin"
+                android:text="@string/jass_default_score"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/jass_score_text_size"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/team_goal_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/score_display_2"
+                android:layout_centerHorizontal="true"
+                android:textColor="@android:color/black"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/team_name_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/score_display_2"
+                android:layout_centerHorizontal="true"
+                android:text="@string/jass_scoreboard_team_name_2"
+                android:textColor="@android:color/black"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/score_update_layout_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/second_team_layout"
+            android:layout_toRightOf="@+id/second_team_layout">
+
+            <ImageButton
+                android:id="@+id/score_update_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@color/colorBackground"
+                android:contentDescription="@string/icon_description_score_update"
+                android:src="@drawable/ic_add_black"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
